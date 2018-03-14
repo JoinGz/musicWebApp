@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>demo</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./dist/css/font-awesome.css">
+   	<style>
+			html {
+				font-size: 16px;
+			}
+			
+			body {
+				margin: 0;
+				padding: 0;
+				background-image: url(./dist/img/body.png);
+			}
+			
+			.change {
+				display: flex;
+				flex: 1;
+				flex-direction: column;
+			}
+			button {
+				position: relative;
+			}
+			
+			.controlVoice {
+				width: 5px;
+				height: 110px;
+				background: #ccc;
+				position: absolute;
+				bottom: 100%;
+				left: 1.4rem;
+			}
+			
+			.yuan {
+				width: 10px;
+				height: 10px;
+				background: greenyellow;
+				position: relative;
+				top: 0;
+				left: -2.5px;
+				border-radius: 50%;
+			}
+			
+			.myflex {
+				display: flex;
+				flex: 1;
+			}
+			
+			#music {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+			}
+			
+			.Router {
+				transition: all .2s ease;
+				display: flex;
+			}
+			
+			.down-enter,
+			.down-leave {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 10rem, 0);
+				transform: translate3d(0, 10rem, 0);
+			}
+			
+			.down-leave-active,
+			.down-enter-active {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 10rem, 0);
+				transform: translate3d(0, 10rem, 0);
+			}
+			
+			.yaoactive{
+				animation: bounce-in .5s;
+			} 
+			
+			@keyframes bounce-in {
+				0% {
+					transform: translateX(-10px);
+				}
+				25% {
+					transform: translateX(0px);
+				}
+				50% {
+					transform: translateX(10px);;
+				}
+				100% {
+					transform: translateX(0px);
+				}
+			}
+		</style>
+  </head>
+  <body class="page">
+    <div id="app"></div>
+    <script src="./dist/build.js"></script>
+  </body>
+</html>
